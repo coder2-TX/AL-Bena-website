@@ -1,7 +1,10 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
+@extends('layouts.site')
+
+@section('html_lang', 'en')
+@section('html_dir', 'ltr')
+
+@section('head')
+<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- ===== SEO Meta Tags ===== -->
@@ -34,9 +37,10 @@
     <link rel="stylesheet" href="{{ asset('assets/css/fonts.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}?v={{ filemtime(public_path('assets/css/styles.css')) }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css">
-</head>
-<body>
-    <!-- ===== Header ===== -->
+@endsection
+
+@section('content')
+<!-- ===== Header ===== -->
     <header class="site-header" id="header">
         <div class="container header-inner">
             <a class="brand" href="#home" aria-label="Albena Foundation">
@@ -683,5 +687,4 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 500);
 });
 </script>
-</body>
-</html>
+@endsection
