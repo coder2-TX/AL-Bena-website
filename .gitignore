@@ -1,0 +1,75 @@
+# ============================================================
+# Dependencies
+# ============================================================
+/vendor
+/node_modules
+
+# ============================================================
+# Environment / Secrets
+# ============================================================
+.env
+.env.*
+!.env.example
+/auth.json
+
+# ============================================================
+# Laravel runtime files
+# ============================================================
+/.phpunit.cache
+/.phpunit.result.cache
+/storage/*.key
+/storage/pail
+
+/storage/logs/*
+!/storage/logs/.gitignore
+
+/storage/framework/cache/*
+!/storage/framework/cache/.gitignore
+
+/storage/framework/sessions/*
+!/storage/framework/sessions/.gitignore
+
+/storage/framework/views/*
+!/storage/framework/views/.gitignore
+
+# ============================================================
+# Production / User Uploaded Files
+# Keep locally, NEVER commit to Git
+# ============================================================
+/storage/app/public/*
+!/storage/app/public/.gitignore
+
+/storage/app/private/*
+!/storage/app/private/.gitignore
+
+/public/storage
+
+# ============================================================
+# Frontend generated files
+# ============================================================
+/public/build
+/public/hot
+
+# ============================================================
+# Backups / Dumps
+# ============================================================
+*.sql
+*.sql.gz
+*.sql.zip
+*.zip
+*.tar
+*.tar.gz
+
+# ============================================================
+# IDE / Local tooling
+# ============================================================
+.phpactor.json
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed

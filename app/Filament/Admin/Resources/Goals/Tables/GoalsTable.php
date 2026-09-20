@@ -1,0 +1,61 @@
+<?php
+
+namespace App\Filament\Admin\Resources\Goals\Tables;
+
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Table;
+
+class GoalsTable
+{
+    public static function configure(Table $table): Table
+    {
+        return $table
+            ->columns([
+                TextColumn::make('order')
+                    ->label('الترتيب')
+                    ->numeric()
+                    ->sortable(),
+                    
+                TextColumn::make('goal_ar')
+                    ->label('الهدف بالعربي')
+                    ->limit(20)
+                    ->searchable(),
+                    
+                TextColumn::make('goal_en')
+                    ->label('الهدف بالإنجليزي')
+                    ->limit(20)
+                    ->searchable(),
+                    
+                ImageColumn::make('image_url')
+                    ->label('الصورة')
+                    ->disk('public'),
+                    
+                TextColumn::make('created_at')
+                    ->label('تاريخ الإنشاء')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                    
+                TextColumn::make('updated_at')
+                    ->label('تاريخ التحديث')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+            ])
+            ->filters([
+                //
+            ])
+            ->recordActions([
+                EditAction::make(),
+            ])
+            ->toolbarActions([
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
+                ]),
+            ]);
+    }
+}
