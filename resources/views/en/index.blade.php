@@ -585,61 +585,7 @@
 
 
 <!-- ===== Footer ===== -->
-<footer class="site-footer">
-    <div class="footer-container">
-        <div class="footer-content">
-            <!-- Main Text and Subtext -->
-            <div class="footer-text">
-                <h3 class="footer-main-text">{{ optional($footer)->main_text_en ?? 'Together We Make Impact' }}</h3>
-                <p class="footer-sub-text">{{ optional($footer)->sub_text_en ?? 'Contact us to learn more' }}</p>
-            </div>
-
-            <!-- Space -->
-            
-            <!-- Phone Number -->
-            <div class="footer-contact">
-                <h4 class="contact-title">Phone Number</h4>
-                <p class="contact-info">{{ optional($footer)->phone_en ?? '+967 777 777 777' }}</p>
-            </div>
-
-            <!-- Space -->
-            
-            <!-- Email -->
-            <div class="footer-contact">
-                <h4 class="contact-title">Email</h4>
-                <p class="contact-info">{{ optional($footer)->email_en ?? 'albena@gmail.com' }}</p>
-            </div>
-
-            <!-- Space -->
-            
-            <!-- Location -->
-            <div class="footer-contact">
-                <h4 class="contact-title">Location</h4>
-                <p class="contact-info">{{ optional($footer)->location_en ?? 'Seiyun - Al-Qarn - Al-Qarn School' }}</p>
-            </div>
-
-            <!-- Space -->
-            
-            <!-- Social Media -->
-            <div class="footer-social">
-                <h4 class="social-title">{{ optional($footer)->social_title_en ?? 'Connect With Us' }}</h4>
-                <div class="social-icons">
-                    <a href="{{ optional($footer)->whatsapp_url ?? '#' }}" class="social-icon" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="{{ optional($footer)->facebook_url ?? '#' }}" class="social-icon" target="_blank">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        
-        <!--  Line and New Paragraph -->
-        <div class="footer-bottom">
-            <p class="copyright">{{ optional($footer)->copyright_en ?? 'All rights reserved to Albena Foundation for Human Development © 2025' }}</p>
-        </div>
-    </div>
-</footer>
+@include('partials.site.footer')
 
     <!-- ===== Separate JavaScript File ===== -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
