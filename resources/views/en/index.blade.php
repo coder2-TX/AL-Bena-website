@@ -41,33 +41,7 @@
 
 @section('content')
 <!-- ===== Header ===== -->
-    <header class="site-header" id="header">
-        <div class="container header-inner">
-            <a class="brand" href="#home" aria-label="Albena Foundation">
-                <img src="{{ asset('assets/images/logo.svg') }}" alt="Albena Foundation Logo" class="brand-logo">
-            </a>
-
-            <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu" id="navToggle">
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-                <span class="nav-toggle-bar"></span>
-            </button>
-
-            <nav id="primary-nav" class="nav" aria-label="Main navigation">
-                <ul class="nav-list">
-                    <li><a href="#home" class="nav-link active">Home</a></li>
-                    <li><a href="#about" class="nav-link">About Us</a></li>
-                    <li><a href="#goals" class="nav-link">Goals</a></li>
-                    <li><a href="#fields" class="nav-link">Fields</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#news" class="nav-link">News</a></li>
-                    <li><a href="#success-stories" class="nav-link">Success Stories</a></li>
-                    <li><a href="{{ route('reports.en') }}" class="nav-link">Reports</a></li>
-                    <li><a href="{{ url('/en/contact') }}" class="nav-link">Contact Us</a></li>
-                </ul>
-                    <a class="lang-switch" href="/" hreflang="ar" aria-label="Switch to Arabic">AR</a>            </nav>
-        </div>
-    </header>
+    @include('partials.site.header')
 
     <!-- ===== Hero Section ===== -->
     <section class="hero" id="home">
